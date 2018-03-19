@@ -1,19 +1,5 @@
 <?php
-/*
- * PlugIn de tipo de cambio para mostrar 
- * 
- *
- * @link              	https://github.com/MetalGeorge/uasb_cambio_moneda_wp_plugin
- * @since             	1.0.0
- * @package           	cambio_moneda
- * Plugin Name:			Cambio de monedas
- * Description:       	Trabajo final para el m$oacute;dulo de gesti&oacute;n de contenido Maestría Desarrollo WEB UASB
- * Plugin URI:        	http://localhost/wordpress/cambio_moneda
- * Author:            	Jorge Escobar
- * Version:     		1.0
- * License:     		GPLv2 or later
- * License URI: 		https://www.gnu.org/licenses/gpl-2.0.txt
-*/
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
