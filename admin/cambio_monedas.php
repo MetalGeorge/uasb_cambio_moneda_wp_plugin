@@ -396,7 +396,28 @@ function cambio_moneda_process_cambio_moneda() {
 		
 		if ($esValido)
 		{
-			$url = "http://free.currencyconverterapi.com/api/v3/convert?q=".$tipoCambioDesde."_".$tipoCambioHasta."&compact=ultra";
+			$cambio = new CambioMonedas;
+			$cambio->ObtieneCalculo($tipoCambioDesde, $tipoCambioHasta, $montoCambio);
+		}
+		else
+		{
+			echo $mensajeValidacion;
+		}
+	}
+}
+
+/*
+	Añadiendo el menú y las configuraciones de página
+*/
+
+class CambioMonedas
+{
+	public function __construct()
+    {
+    }
+	public function ObtieneCalculo($tipoCambioDesde, $tipoCambioHasta, $montoCambio)
+	{
+		$url = "http://free.currencyconverterapi.com/api/v3/convert?q=".$tipoCambioDesde."_".$tipoCambioHasta."&compact=ultra";
 			// Initialize CURL:
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
@@ -411,19 +432,9 @@ function cambio_moneda_process_cambio_moneda() {
 			
 			$tipoCambio = $tiposDeCambioResponse[$tipoCambioDesde."_".$tipoCambioHasta];
 			$resultado = $montoCambio * $tipoCambio;
-			echo "<br>".$montoCambio." ".$tipoCambioDesde.esc_html__(" Corresponde a: ", "cambio_monedas").$resultado ." ".$tipoCambioHasta ;
-		}
-		else
-		{
-			echo $mensajeValidacion;
-		}
+			echo "<br>".$montoCambio." <b>".$tipoCambioDesde."</b>".esc_html__(" Corresponde a: ", "cambio_monedas").$resultado ." <b>".$tipoCambioHasta."</b>" ;
 	}
 }
-
-/*
-	Añadiendo el menú y las configuraciones de página
-*/
-
 
 
 // Despliega la configuración de la página
