@@ -1,51 +1,50 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Cambio de monedas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-26 02:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2018-03-26 00:26-0400\n"
+"Last-Translator: admin <jorgeescobar777@gmail.com>\n"
+"Language-Team: Spanish (Mexico)\n"
+"Language: es_MX\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Poedit 2.0.6\n"
 
 #: admin/cambio_monedas.php:435
 msgid "Equals to:"
-msgstr ""
+msgstr "Igual a"
 
 #: admin/cambio_monedas.php:15
 msgid "Amount"
-msgstr ""
+msgstr "Monto"
 
 #. Name of the plugin
 msgid "Currency Exchange"
-msgstr ""
+msgstr "Cambio de monedas"
 
 #: admin/cambio_monedas.php:14
 msgid "Currency From"
-msgstr ""
+msgstr "Moneda Desde"
 
 #: admin/cambio_monedas.php:16
 msgid "Currency Target"
-msgstr ""
+msgstr "Moneda objetivo"
 
 #. URI of the plugin
 msgid "http://localhost/wordpress/cambio_moneda"
-msgstr ""
+msgstr "http://localhost/wordpress/cambio_moneda"
 
 #. Author of the plugin
 msgid "Jorge Escobar"
-msgstr ""
+msgstr "Jorge Escobar"
 
 #: admin/cambio_monedas.php:387
 msgid "Can't convert to the same currency"
-msgstr ""
+msgstr "No se puede convertir usando la misma moneda"
 
 #. Description of the plugin
 msgid "Final work for  CMS Module WEB UASB"
-msgstr ""
+msgstr "Trabajo final para el modulo CMD WEB UASB"

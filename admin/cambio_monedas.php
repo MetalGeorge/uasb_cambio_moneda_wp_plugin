@@ -8,14 +8,13 @@ if ( ! defined( 'WPINC' ) ) {
 // Despliega formulario
 function cambio_moneda_form_cambio_moneda() {
 	?>
-
+	<?php echo $lang=get_bloginfo("language"); ?>
 	<form method="post">
 	<table border="1">
-		<tr><td><label for="tipoCambioDesdeSelect">Moneda Desde</label></td>
-		<td><label for="tipoCambioMontoSelect">Monto</label></td>
-		<td><label for="tipoCambioHastaSelect">Moneda Objetivo</label></td>
+		<tr><td><label for="tipoCambioDesdeSelect"><?php echo esc_html__('Currency From','cambio_monedas')?></label></td>
+		<td><label for="tipoCambioMontoSelect"><?php echo esc_html__('Amount','cambio_monedas')?></label></td>
+		<td><label for="tipoCambioHastaSelect"><?php echo esc_html__('Currency Target','cambio_monedas')?></label></td>
 		</tr>
-		
 		<tr><td>
 		<select name="tipoCambioDesdeSelect">
 		   <option value="AED" title="United Arab Emirates Dirham">AED</option>
@@ -384,7 +383,7 @@ function cambio_moneda_process_cambio_moneda() {
 		
 		if ($tipoCambioDesde == $tipoCambioHasta)
 		{
-			$mensajeValidacion = esc_html__("No se puede convertir usando la misma moneda", "cambio_monedas");
+			$mensajeValidacion = esc_html__("Can't convert to the same currency", "cambio_monedas");
 			$esValido = false;
 		}
 	
