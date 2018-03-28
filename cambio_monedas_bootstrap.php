@@ -21,14 +21,15 @@ if ( ! defined( 'WPINC' ) ) {
 
 // carga los textos
 function myplugin_load_textdomain() {
-	load_plugin_textdomain( 'cambio_monedas', false, plugin_dir_path( __FILE__ ) . 'languages/' );
+	load_plugin_textdomain( 'cambio_monedas', false, basename( dirname( _FILE_ ) ) . '/languages' );
 }
+add_action( 'plugins_loaded', 'myplugin_load_textdomain' );
 
 // se incluyen las dependencias para el administrador
 if ( is_admin() ) {
 	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-menu.php';
 }
 
-// se incluyen las dependencias públicas
+// se incluyen las dependencias pÃºblicas
 require_once plugin_dir_path( __FILE__ ) . 'admin/cambio_monedas.php';
 
